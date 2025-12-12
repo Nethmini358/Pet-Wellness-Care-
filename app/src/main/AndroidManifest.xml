@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.project1"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Project1">
+
+        <!-- new files must be added here -->
+        <activity android:name=".login_activity" />
+        <activity android:name=".signin_activity"/>
+        <activity android:name=".home_activity"/>
+        <activity android:name=".vaccine_activity"/>
+        <activity android:name=".complete_activity"/>
+        <activity android:name=".addvaccine_activity"/>
+        <activity android:name=".food_activity"/>
+        <activity android:name=".buynow_activity"/>
+        <activity android:name=".paymethod_activity"/>
+        <activity android:name=".mobilepayment_activity"/>
+        <activity android:name=".cardpayment_activity"/>
+        <activity android:name=".otp_activity"/>
+        <activity android:name=".success_activity"/>
+        <activity android:name=".profile_activity"/>
+        <activity android:name=".petprofile_activity"/>
+        <activity
+            android:name=".SplashActivity"
+            android:exported="false" />
+        <activity android:name=".onboard1"/>
+        <activity android:name=".onboard2"/>
+        <activity android:name=".onboard3"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+
+</manifest>

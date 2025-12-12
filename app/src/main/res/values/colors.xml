@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!-- Primary Color (60%) -->
+<color name="colorPrimary">#FFFFFF</color> <!-- White -->
+
+<!-- Secondary Color (30%) -->
+<color name="colorSecondary">#ADD8E6</color> <!-- Light Blue -->
+
+<!-- Accent Color (10%) -->
+<color name="colorAccent">#FFA500</color> <!-- Light Brown -->
+
+
+    <color name="purple_500">#6200EE</color>
+    <color name="gray">#808080</color>
+
+    <color name="primary_color">#E6F0FA</color>
+    <color name="text_color">#1A252F</color>
+
+</resources>

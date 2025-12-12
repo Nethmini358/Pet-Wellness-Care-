@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vaccine_activity">
+
+    <!-- Logo at the top right -->
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="114dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/app_logo2"
+        android:src="@drawable/newlogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Page Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vaccination_schedule2"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="16dp" />
+
+
+    <!-- Section Title -->
+    <!-- Scrollable Vaccine List -->
+
+    <Switch
+        android:id="@+id/btn_switch2"
+        android:layout_width="264dp"
+        android:layout_height="50dp"
+        android:text="Upcomming Vaccine"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.165" />
+
+    <TextView
+        android:id="@+id/tvUpcoming"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/completed_vaccines"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
+
+    <ScrollView
+        android:id="@+id/scrollVaccines"
+        android:layout_width="381dp"
+        android:layout_height="480dp"
+        android:layout_margin="16dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvUpcoming">
+
+        <LinearLayout
+            android:id="@+id/vaccineList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- complete vaccine card 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted1"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="@string/right1"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName1"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="@string/dhpp_vaccine_001"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate1"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="@string/scheduled_25th_january_2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted2"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="@string/right"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName2"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="@string/dhpp_combo_vaccine_01"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate2"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="@string/scheduled_5th_april_2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card  3-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted3"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="@string/right2"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName3"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="@string/dhpp_combo_02"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate3"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="@string/scheduled_25th_april_2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 4 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted4"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="@string/right3"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName4"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="@string/dhpp_combo_vaccine3"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate4"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="@string/scheduled_3rd_may_2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 5 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted5"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="✔"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName5"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="DHPP Vaccine - 002"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate5"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="Scheduled: 20th May 2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 6 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted6"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="✔"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName6"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="DHPP Combo Vaccine - 002"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate6"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="Scheduled: 25th June 2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 7 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted7"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="✔"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName7"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="DHPP Combo Vaccine"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate7"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="Scheduled: 12th July 2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 8 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted8"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="✔"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName8"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="DHPP Combo Vaccine"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate8"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="Scheduled: 25th July 2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 9-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted9"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="✔"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName9"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="@string/dhpp_combo_vaccine5"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate9"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="@string/scheduled_25thaugust_2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- complete vaccine card 10 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp">
+
+                <TextView
+                    android:id="@+id/tvCompleted10"
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:text="✔"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="62sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/vaccineName10"
+                        android:layout_width="242dp"
+                        android:layout_height="34dp"
+                        android:layout_gravity="left"
+                        android:text="@string/rabies_vaccine"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/vaccineDate10"
+                        android:layout_width="243dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="left"
+                        android:gravity="center|left"
+                        android:text="@string/scheduled_25th_august2025"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation View -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@color/nav_item_color"
+        app:itemTextColor="@color/nav_item_color"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
